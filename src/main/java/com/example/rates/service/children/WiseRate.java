@@ -16,7 +16,6 @@ public class WiseRate extends AbstractHttpRateProvider {
     private final String URL;
     private final String TOKEN;
 
-    @Autowired
     public WiseRate(
             @Value("${WISE_URL}") String URL,
             @Value("${WISE_API_KEY}") String TOKEN

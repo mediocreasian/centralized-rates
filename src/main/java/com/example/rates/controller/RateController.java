@@ -18,19 +18,22 @@ public class RateController {
         this.rateService = rateService;
     }
 
+
+
     /**
      * GET /api/rates?from=GBP&to=SGD
      *
      * @param from  three-letter currency code (e.g. "GBP")
      * @param to    three-letter currency code (e.g. "SGD")
-     * @return a list of RateQuote, one per provider
+     * @param email send email to someone
      */
-    @GetMapping
-    public List<RateQuote> getAllRates(
+    @GetMapping("/send")
+    public void sendRates(
             @RequestParam("from") String from,
-            @RequestParam("to") String to
+            @RequestParam("to") String to,
+            @RequestParam("email") String email
     ) {
-        return rateService.getAllRates(from, to);
+        rateService.sendMail(email, from, to);
     }
 }
 

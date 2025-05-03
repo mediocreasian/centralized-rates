@@ -17,7 +17,6 @@ public class ExchangeRate extends AbstractHttpRateProvider {
     private final String URL;
     private final String TOKEN;
 
-    @Autowired
     public ExchangeRate(
             @Value("${EXCHANGE_URL}") String URL,
             @Value("${EXCHANGE_API_KEY}") String TOKEN

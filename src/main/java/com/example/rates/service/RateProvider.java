@@ -1,6 +1,5 @@
 package com.example.rates.service;
 
-
 import java.math.BigDecimal;
 
 public interface RateProvider {

@@ -22,7 +22,6 @@ public class BeaconRate extends AbstractHttpRateProvider {
     private final String URL;
     private final String TOKEN;
 
-    @Autowired
     public BeaconRate(
             @Value("${BEACON_URL}")    String URL,
             @Value("${BEACON_API_KEY}") String TOKEN
