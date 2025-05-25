@@ -28,8 +28,4 @@ public class RateService {
         sendMailService.sendMail(email, getAllRates(from, to));
     }
 
-    @Scheduled(cron = "0 */5 * * * *", zone = "Asia/Singapore")
-    public void sendMailAutomation() {
-        this.sendMail("exelbert2010@gmail.com","SGD","PHP");
-    }
 }
